@@ -80,8 +80,12 @@ facet_wrap(plastic_waste ~ continent, ncol =3)
 ### Exercise 2
 
 ``` r
-# insert code here
+ggplot(plastic_waste,
+       aes(x = plastic_waste_per_cap, color = continent, fill = continent)) +
+geom_density(alpha = 0.4)
 ```
+
+![](lab-02_files/figure-gfm/plastic-waste-density-1.png)<!-- -->
 
 Réponse à la question…
 
