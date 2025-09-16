@@ -54,13 +54,17 @@ Réponse à la question...
 Boxplot:
 
 ```{r plastic-waste-boxplot}
-# insert code here
+ggplot(plastic_waste,
+       aes(x = continent, y = plastic_waste_per_cap)) +
+  geom_boxplot()
 ```
 
 Violin plot:
 
 ```{r plastic-waste-violin}
-# insert code here
+ggplot(plastic_waste,
+       aes(x = continent, y = plastic_waste_per_cap)) +
+  geom_violin()
 ```
 
 Réponse à la question...
