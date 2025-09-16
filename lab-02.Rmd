@@ -1,7 +1,7 @@
 ---
 title: "Lab 02 - Plastic waste"
-author: "Votre nom"
-date: "La date"
+author: "Kenan Chantemesse"
+date: "15.09.2025"
 output: github_document
 ---
 
@@ -18,6 +18,11 @@ plastic_waste <- read_csv("data/plastic-waste.csv")
 Commençons par filtrer les données pour retirer le point représenté par Trinité et Tobago (TTO) qui est un outlier.
 
 ```{r filter-data, message=FALSE}
+ggplot(plastic_waste, 
+       aes(x = plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.2)
+plastic_waste %>%
+  filter(plastic_waste_per_cap > 3.5)
 plastic_waste <- plastic_waste %>%
   filter(plastic_waste_per_cap < 3.5)
 ```
@@ -28,7 +33,10 @@ plastic_waste <- plastic_waste %>%
 ### Exercise 1
 
 ```{r plastic-waste-continent}
-# insert code here
+ggplot(plastic_waste,
+       aes(x = plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.2)
+facet_wrap(plastic_waste ~ continent, ncol =3)
 ```
 
 ### Exercise 2
