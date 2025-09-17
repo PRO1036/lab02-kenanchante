@@ -46,36 +46,20 @@ plastic_waste <- plastic_waste %>%
 
 ## Exercices
 
+Je n’ai pas anticipé ce résultat, car Trinidad and Tobago est une petite
+île. Il est donc surprenant que sa quantité de déchets plastiques par
+habitant en kg/jour soit significative.
+
 ### Exercise 1
 
 ``` r
 ggplot(plastic_waste,
        aes(x = plastic_waste_per_cap)) +
-  geom_histogram(binwidth = 0.2)
+  geom_histogram(binwidth = 0.2) +
+facet_wrap(~ continent)
 ```
 
 ![](lab-02_files/figure-gfm/plastic-waste-continent-1.png)<!-- -->
-
-``` r
-facet_wrap(plastic_waste ~ continent, ncol =3)
-```
-
-    ## <ggproto object: Class FacetWrap, Facet, gg>
-    ##     compute_layout: function
-    ##     draw_back: function
-    ##     draw_front: function
-    ##     draw_labels: function
-    ##     draw_panels: function
-    ##     finish_data: function
-    ##     init_scales: function
-    ##     map_data: function
-    ##     params: list
-    ##     setup_data: function
-    ##     setup_params: function
-    ##     shrink: TRUE
-    ##     train_scales: function
-    ##     vars: function
-    ##     super:  <ggproto object: Class FacetWrap, Facet, gg>
 
 ### Exercise 2
 
