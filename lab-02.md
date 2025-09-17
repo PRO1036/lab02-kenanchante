@@ -61,6 +61,11 @@ facet_wrap(~ continent)
 
 ![](lab-02_files/figure-gfm/plastic-waste-continent-1.png)<!-- -->
 
+Selon le graphique, l’Afrique a une quantité de quantité de déchets
+plastiques par habitant moins élevé que l’Europe. Par ailleurs,
+l’Amérique du Sud est le continent rejetant le moins de déchets
+plastique.
+
 ### Exercise 2
 
 ``` r
@@ -71,7 +76,10 @@ geom_density(alpha = 0.4)
 
 ![](lab-02_files/figure-gfm/plastic-waste-density-1.png)<!-- -->
 
-Réponse à la question…
+Dans ce graphe, color et fill sont placés dans aes pour que ces
+variables soient propres à chaque courbe. Au contraire, alpha est placé
+dans geom_density pour que cette valeur soit fixe, car nous voulons la
+même transparence pour chaque courbe.
 
 ### Exercise 3
 
