@@ -73,7 +73,11 @@ Réponse à la question...
 
 
 ```{r plastic-waste-mismanaged}
-# insert code here
+ggplot(plastic_waste, 
+       aes(x = plastic_waste_per_cap, 
+           y = mismanaged_plastic_waste_per_cap,
+           color = continent)) +
+  geom_point()
 ```
 
 Réponse à la question...
@@ -82,11 +86,19 @@ Réponse à la question...
 
 
 ```{r plastic-waste-population-total}
-# insert code here
+ggplot(plastic_waste, 
+       aes(x = plastic_waste_per_cap, 
+           y = total_pop,
+           color = continent)) +
+  geom_point()
 ```
 
 ```{r plastic-waste-population-coastal}
-# insert code here
+ggplot(plastic_waste, 
+       aes(x = plastic_waste_per_cap, 
+           y = coastal_pop,
+           color = continent)) +
+  geom_point()
 ```
 
 Réponse à la question...
