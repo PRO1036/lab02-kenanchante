@@ -159,5 +159,12 @@ Réponse à la question…
 Recréez la visualisation:
 
 ``` r
-# insert code here
+ggplot(plastic_waste, 
+       aes(x = coastal_pop, 
+           y = plastic_waste_per_cap,
+           color = continent)) +
+  geom_point() +
+  labs(title = " Quantité de déchets plastiques vs Proportion de la population côtière ", subtitle = " Selon le continent ", x = "Proportion de la population côtière (Coastal / total population)", y = "Nombre de déchets plastiques par habitant" )
 ```
+
+![](lab-02_files/figure-gfm/recreate-viz-1.png)<!-- -->
